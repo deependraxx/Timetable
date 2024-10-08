@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class Timetable</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+        }
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 5px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-align: center;
+        }
+        .timetable {
+            display: none;
+            margin-top: 20px;
+            padding: 20px;
+            background-color: white;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .timetable h2 {
+            margin: 0 0 10px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border: 1px solid #ccc;
+        }
+        th {
+            background-color: #007bff;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Class Timetable</h1>
+    <div>
+        <button class="button" onclick="showTimetable('monday')">Monday</button>
+        <button class="button" onclick="showTimetable('tuesday')">Tuesday</button>
+        <button class="button" onclick="showTimetable('wednesday')">Wednesday</button>
+        <button class="button" onclick="showTimetable('thursday')">Thursday</button>
+        <button class="button" onclick="showTimetable('friday')">Friday</button>
+    </div>
+
+    <div id="monday" class="timetable">
+        <h2>Monday Schedule</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Time</th>
+                    <th>Course</th>
+                    <th>Room/Instructor</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>09:00 – 10:00</td>
+                    <td>KCS-753 (Project)</td>
+                    <td>G-307</td>
+                </tr>
+                <tr>
+                    <td>10:00 – 11:00</td>
+                    <td>Cloud Computing (L)</td>
+                    <td>G-103</td>
+                </tr>
+                <tr>
+                    <td>11:00 – 12:00</td>
+                    <td>Vision of Human Society (L)</td>
+                    <td>G-103</td>
+                </tr>
+                <tr>
+                    <td>12:50 – 01:45</td>
+                    <td>KHU-702 (Project Management & Entrepreneurship)</td>
+                    <td>Dr. Priyanka Srivastava</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div id="tuesday" class="timetable">
+        <h2>Tuesday Schedule</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Time</th>
+                    <th>Course</th>
+                    <th>Room/Instructor</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>09:00 – 10:00</td>
+                    <td>One-Hour Quiz</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>10:00 – 11:00</td>
+                    <td>Software Testing</td>
+                    <td>G-103</td>
+                </tr>
+                <tr></tr>
+                    <td>11:00 – 12:00</td>
+                    <td>Project Management & Entrepreneurship</td>
+                    <td>G-103</td>
+                </tr>
+                <tr>
+                    <td>01:45 – 02:40</td>
+                    <td>Cloud Computing (T)</td>
+                    <td>G-103</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div id="wednesday" class="timetable">
+        <h2>Wednesday Schedule</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Time</th>
+                    <th>Course</th>
+                    <th>Room/Instructor</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>09:00 – 10:00</td>
+                    <td>Cloud Computing (L)</td>
+                    <td>G-103</td>
+                </tr>
+                <tr>
+                    <td>10:00 – 11:00</td>
+                    <td>KCS-753 (Project)</td>
+                    <td>G-307</td>
+                </tr>
+                <tr>
+                    <td>11:00 – 12:00</td>
+                    <td>Vision of Human Society (L)</td>
+                    <td>G-103</td>
+                </tr>
+                <tr>
+                    <td>12:50 – 01:45</td>
+                    <td>Software Testing (L)</td>
+                    <td>G-104</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div id="thursday" class="timetable">
+        <h2>Thursday Schedule</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Time</th>
+                    <th>Course</th>
+                    <th>Room/Instructor</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>09:00 – 10:00</td>
+                    <td>Software Testing (L)</td>
+                    <td>G-104</td>
+                </tr>
+                <tr>
+                    <td>10:00 – 11:00</td>
+                    <td>KCS-753 (Project)</td>
+                    <td>G-307</td>
+                </tr>
+                <tr>
+                    <td>11:00 – 12:00</td>
+                    <td>Cloud Computing (L)</td>
+                    <td>G-103</td>
+                </tr>
+                <tr>
+                    <td>12:50 – 01:45</td>
+                    <td>KHU-702 (Project Management & Entrepreneurship)</td>
+                    <td>Dr. Priyanka Srivastava</td>
+                </tr>
+                <tr>
+                    <td>01:45 – 02:40</td>
+                    <td>Cloud Computing (T)</td>
+                    <td>G-106</td>
+                </tr>
+                <tr>
+                    <td>03:35 – 04:25</td>
+                    <td>KCS-751 (A) (AI Lab)</td>
+                    <td>G-306</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div id="friday" class="timetable">
+        <h2>Friday Schedule</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Time</th>
+                    <th>Course</th>
+                    <th>Room/Instructor</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>09:00 – 10:00</td>
+                    <td>KCS-753 (Project)</td>
+                    <td>G-409</td>
+                </tr>
+                <tr>
+                    <td>10:00 – 11:00</td>
+                    <td>Software Testing (L)</td>
+                    <td>G-104</td>
+                </tr>
+                <tr>
+                    <td>11:00 – 12:00</td>
+                    <td>Vision of Human Society (L)</td>
+                    <td>G-103</td>
+                </tr>
+                <tr>
+                    <td>12:50 – 01:45</td>
+                    <td>Cloud Computing (L)</td>
+                    <td>G-103</td>
+                </tr>
+                <tr>
+                    <td>01:45 – 02:40</td>
+                    <td>Software Testing (T)</td>
+                    <td>G-104</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        function showTimetable(day) {
+            const timetables = document.querySelectorAll('.timetable');
+            timetables.forEach(t => t.style.display = 'none'); // Hide all
+            document.getElementById(day).style.display = 'block'; // Show selected
+        }
+
+        function showCurrentDayTimetable() {
+            const today = new Date();
+            const options = { weekday: 'long' };
+            const day = today.toLocaleDateString('en-US', options).toLowerCase();
+            showTimetable(day);
+        }
+
+        // Call this function when the page loads to show today's timetable
+        window.onload = showCurrentDayTimetable;
+    </script>
+
+</body>
+</html>
