@@ -274,12 +274,23 @@
     </div>
 
     <script>
-         function showCurrentDayTimetable() {
+        function showTimetable(day) {
+            const timetables = document.querySelectorAll('.timetable');
+            timetables.forEach(timetable => {
+                timetable.style.display = 'none';
+            });
+            document.getElementById(day).style.display = 'block';
+        }
+
+        function showCurrentDayTimetable() {
             const today = new Date();
             const options = { weekday: 'long' };
             const day = today.toLocaleDateString('en-US', options).toLowerCase();
             showTimetable(day);
         }
+
+        // Show the current day's timetable when the page loads
+        window.onload = showCurrentDayTimetable;
     </script>
 </body>
 </html>
