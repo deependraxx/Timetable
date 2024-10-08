@@ -274,13 +274,6 @@
     </div>
 
     <script>
-        function showTimetable(day) {
-            const timetables = document.querySelectorAll('.timetable');
-            timetables.forEach(timetable => {
-                timetable.style.display = 'none';
-            });
-            document.getElementById(day).style.display = 'block';
-        }
          function showCurrentDayTimetable() {
             const today = new Date();
             const options = { weekday: 'long' };
