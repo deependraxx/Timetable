@@ -281,6 +281,12 @@
             });
             document.getElementById(day).style.display = 'block';
         }
+         function showCurrentDayTimetable() {
+            const today = new Date();
+            const options = { weekday: 'long' };
+            const day = today.toLocaleDateString('en-US', options).toLowerCase();
+            showTimetable(day);
+        }
     </script>
 </body>
 </html>
